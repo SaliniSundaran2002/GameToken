@@ -75,15 +75,15 @@ const App = () => {
           backgroundImage: `url(${img})`,
         }}
       >
-        <h1 className="text-4xl font-extrabold text-white mb-6 text-center">
-        TokenPlay
+        <h1 className="text-6xl font-bold font-serif text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 mb-6 text-center">
+          Token Play
         </h1>
-        <div className="border border-red-500 rounded-lg p-8 max-w-lg w-full">
+        <div className="border border-red-500 rounded-lg p-8 max-w-lg w-full shadow-[0_4px_16px_rgba(128,0,128,0.5),0_8px_24px_rgba(255,20,147,0.5),0_16px_56px_rgba(0,0,255,0.5)]">
 
           <button
             onClick={connectWallet}
-            className="w-full px-6 py-3 border border-red-700 text-red-800 text-lg font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300"
-          >
+            className="w-full px-6 py-3 border-2 border-purple-500 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 bg-clip-border text-transparent bg-clip-text text-lg font-semibold rounded-lg shadow hover:bg-gradient-to-r hover:from-blue-500 hover:via-pink-500 hover:to-purple-500 hover:text-white transition duration-300"
+>
             Connect Wallet
           </button>
 
@@ -99,26 +99,28 @@ const App = () => {
           )}
 
           <div className="mt-8 space-y-4">
-            <input
-              type="text"
-              placeholder="Recipient Address"
-              className="w-full px-6 py-3 border border-red-700 text-red-800 text-lg font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300"
-              value={mintAddress}
-              onChange={(e) => setMintAddress(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="Amount"
-              className="w-full px-6 py-3 border border-red-700 text-red-800 text-lg font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300"
-              value={mintAmount}
-              onChange={(e) => setMintAmount(e.target.value)}
-            />
-            <button
-              onClick={mintTokens}
-              className="w-full px-6 py-3 bg-green-600 text-white text-lg font-semibold rounded-lg shadow hover:bg-green-700 transition duration-300 bg-opacity-60"
-            >
-              Mint Tokens
-            </button>
+          <input
+  type="text"
+  placeholder="Recipient Address"
+  className="w-full px-6 py-3 border-2 border-purple-500 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 bg-clip-border text-transparent bg-clip-text text-lg font-semibold rounded-lg shadow hover:bg-gradient-to-r hover:from-blue-500 hover:via-pink-500 hover:to-purple-500 hover:text-white transition duration-300"
+  value={mintAddress}
+  onChange={(e) => setMintAddress(e.target.value)}
+/>
+
+<input
+  type="number"
+  placeholder="Amount"
+  className="w-full px-6 py-3 border-2 border-purple-500 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 bg-clip-border text-transparent bg-clip-text text-lg font-semibold rounded-lg shadow hover:bg-gradient-to-r hover:from-blue-500 hover:via-pink-500 hover:to-purple-500 hover:text-white transition duration-300"
+  value={mintAmount}
+  onChange={(e) => setMintAmount(e.target.value)}
+/>
+
+<button
+  onClick={mintTokens}
+  className="w-full px-6 py-3 border-2 border-purple-500 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 bg-clip-border text-transparent bg-clip-text text-lg font-semibold rounded-lg shadow hover:bg-gradient-to-r hover:from-blue-500 hover:via-pink-500 hover:to-purple-500 hover:text-white transition duration-300"
+>
+  Mint Tokens
+</button>
           </div>
         </div>
       </div>
